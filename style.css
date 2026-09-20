@@ -1,106 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Space Grotesk',sans-serif}
-body{
-  background:#050a1f;
-  background: radial-gradient(ellipse at top right, #0f1e4a 0%, #050a1f 60%);
-  color:white;
-  min-height:100vh;
-  overflow-x:hidden;
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: #020617;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-align: center;
 }
 
-/* TOP NAME - RAMYA. style */
-nav{
-  padding:28px 7%;
-  background:transparent;
-  display:flex;justify-content:space-between;align-items:center;
+/* AMULYA. logo */
+nav h1 {
+  text-align: left;
+  padding: 20px 25px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
-nav h1{
-  font-size:38px;font-weight:800;letter-spacing:1px;color:white;
-}
-nav ul{list-style:none;display:flex;gap:20px}
-nav ul li a{
-  text-decoration:none;color:#8892b0;font-size:15px;
-  transition:0.3s;
-}
-nav ul li a:hover{color:#00e5ff}
+nav ul { display: none; } /* hide menu for this look */
 
-/* HERO - Center like photo */
-.hero{
-  text-align:center;
-  padding:60px 8% 30px 8%;
-  max-width:800px;margin:0 auto;
+/* Center text */
+.hero, section {
+  padding: 40px 25px;
 }
-.hero h1{
-  font-size:52px;font-weight:800;margin-bottom:25px;
-  color:white;letter-spacing:-1px;
+.hero h1 {
+  font-size: 42px;
+  margin-top: 20px;
+  letter-spacing: -1px;
 }
-.hero p{
-  color:#8892b0;font-size:18px;line-height:1.8;
-  max-width:600px;margin:0 auto 40px auto;
+.hero p, .about p {
+  color: #94a3b8;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 20px auto;
+  max-width: 330px;
 }
 
-/* BUTTONS - EXACT like photo */
-.btn{
-  display:block;
-  width:220px;
-  margin:14px auto;
-  padding:16px 30px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-  font-size:17px;
-  text-align:center;
-  transition:0.3s;
+/* Buttons - exact cyan */
+.btn, .project-btn, a[href*="#work"], a[href*="resume"] {
+  display: block;
+  width: 200px;
+  margin: 12px auto;
+  padding: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
 }
-.btn:first-of-type{
-  background:#00e5ff;
-  color:#050a1f;
-  box-shadow:0 0 30px rgba(0,229,255,0.5);
-  border:2px solid #00e5ff;
+.btn:nth-of-type(1) {
+  background: #00E5FF;
+  color: #020617;
+  box-shadow: 0 0 25px rgba(0,229,255,0.6);
 }
-.btn:first-of-type:hover{
-  box-shadow:0 0 50px rgba(0,229,255,0.8);
-  transform:scale(1.05);
-}
-.btn:last-of-type{
-  background:rgba(255,255,255,0.05);
-  color:white;
-  border:1.5px solid #00e5ff;
-  backdrop-filter:blur(10px);
-}
-.btn:last-of-type:hover{
-  background:rgba(0,229,255,0.1);
+.btn:nth-of-type(2) {
+  background: transparent;
+  color: white;
+  border: 1.5px solid #00E5FF;
 }
 
-/* PROFILE IMAGE - Glowing circles like photo */
-.project-container, .skills, .section-title, footer{
-  /* keep your projects below */
+/* Glowing Photo - THIS IS MAIN */
+.hero img, .profile, .about img {
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 70px;
+  border: 3px solid #00E5FF;
+  box-shadow: 
+    0 0 0 8px rgba(0,229,255,0.15),
+    0 0 40px rgba(0,229,255,0.8),
+    0 0 80px rgba(59,130,246,0.5);
 }
-.hero-image-wrapper{
-  position:relative;
-  width:320px;height:320px;
-  margin:80px auto 50px auto;
-  display:flex;justify-content:center;align-items:center;
+
+/* Glowing rings around photo */
+.hero {
+  position: relative;
 }
-/* If you don't have image div, this will style your img tag */
-.hero img, .profile-img{
-  width:200px;height:200px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid transparent;
-  background: linear-gradient(#050a1f,#050a1f) padding-box,
-              linear-gradient(90deg,#00e5ff,#3b82f6) border-box;
-  box-shadow:0 0 40px rgba(0,229,255,0.6), 0 0 80px rgba(59,130,246,0.4);
-  position:relative;z-index:3;
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(0,229,255,0.2);
+  border-radius: 50%;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
-/* Glowing rings */
-.hero-image-wrapper::before{
-  content:'';
-  position:absolute;
-  width:260px;height:260px;
-  border:1px solid rgba(0,229,255,0.3);
-  border-radius:50%;
-  animation: spin 8s linear infinite;
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(99,102,241,0.15);
+  border-radius: 50%;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
-.hero-image-wrapper::after{
-  content:'';
+
+/* Other sections dark */
+.project-card, .skill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,229,255,0.15);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 15px;
+  color: #94a3b8;
+}
+.section-title { color: white; margin-top: 50px; }
+footer { color: #475569; padding: 30px; font-size: 13px; }
