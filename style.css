@@ -1,64 +1,19 @@
-/* CREATIVE WEB-TYPE PORTFOLIO - 2026 TREND */
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&display=swap');
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Bricolage Grotesque',sans-serif}
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Fredoka',sans-serif}
 body{
-  background:#fff;
-  color:#111;
-  background-image: radial-gradient(#111 1px, transparent 1px);
-  background-size: 24px 24px;
-  background-color:#f5f3ff;
+  background:#fff7ed;
+  background-image: radial-gradient(#a78bfa 1.5px, transparent 1.5px), radial-gradient(#f472b6 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  color:#1f1142;
 }
 
-/* NAV - Web Type */
+/* COLORFUL NAVBAR */
 nav{
   display:flex;justify-content:space-between;align-items:center;
-  padding:18px 7%;background:white;border:3px solid #111;
-  border-radius:100px;margin:20px 5%;position:sticky;top:20px;z-index:100;
-  box-shadow:6px 6px 0 #111;
+  padding:14px 24px;margin:18px 4%;border-radius:100px;
+  background:linear-gradient(90deg,#a78bfa,#f472b6,#fb7185);
+  box-shadow:0 10px 20px rgba(167,139,250,0.4);
+  position:sticky;top:16px;z-index:99;
 }
-nav h1{font-weight:800;font-size:24px;letter-spacing:-1px}
-nav h1::after{content:' ●';color:#7c3aed}
-nav ul{display:flex;gap:10px;list-style:none}
-nav ul li a{
-  text-decoration:none;color:#111;background:white;
-  border:2px solid #111;padding:8px 18px;border-radius:100px;
-  font-weight:700;font-size:14px;transition:0.2s;
-}
-nav ul li a:hover{background:#111;color:white;transform:translateY(-2px)}
-
-/* HERO - Web Type Creative */
-.hero{
-  text-align:center;padding:90px 5% 60px 5%;
-  background:white;border:3px solid #111;border-radius:32px;
-  margin:30px 5%;box-shadow:12px 12px 0 #111;position:relative;
-  overflow:hidden;
-}
-.hero::before{
-  content:'WEB DESIGNER / DEVELOPER / CREATOR';
-  position:absolute;top:18px;left:50%;transform:translateX(-50%);
-  font-size:11px;letter-spacing:4px;background:#111;color:white;
-  padding:6px 18px;border-radius:100px;
-}
-.hero h1{
-  font-size:68px;font-weight:800;line-height:0.9;letter-spacing:-3px;
-  margin-top:20px;
-}
-.hero h1 span{
-  background:linear-gradient(90deg,#7c3aed,#f43f5e,#f59e0b);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;
-  display:inline-block;
-  animation: wiggle 2s ease-in-out infinite;
-}
-@keyframes wiggle{0%,100%{transform:rotate(0deg)}25%{transform:rotate(1.5deg)}75%{transform:rotate(-1.5deg)}}
-
-.hero p{max-width:600px;margin:20px auto;opacity:0.7;line-height:1.7;font-size:17px}
-
-.btn{
-  display:inline-block;padding:14px 28px;border-radius:100px;
-  text-decoration:none;font-weight:800;border:3px solid #111;
-  margin:10px 8px;transition:0.2s;box-shadow:4px 4px 0 #111;
-}
-.btn:first-of-type{background:#
+nav h1{color:white;font-size:22px;font-weight:700
