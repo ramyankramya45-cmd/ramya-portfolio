@@ -1,19 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Fredoka',sans-serif}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Space Grotesk',sans-serif}
 body{
-  background:#fff7ed;
-  background-image: radial-gradient(#a78bfa 1.5px, transparent 1.5px), radial-gradient(#f472b6 1.5px, transparent 1.5px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
-  color:#1f1142;
+  background:#050a1f;
+  background: radial-gradient(ellipse at top right, #0f1e4a 0%, #050a1f 60%);
+  color:white;
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
-/* COLORFUL NAVBAR */
+/* TOP NAME - AMULYA. style */
 nav{
+  padding:28px 7%;
+  background:transparent;
   display:flex;justify-content:space-between;align-items:center;
-  padding:14px 24px;margin:18px 4%;border-radius:100px;
-  background:linear-gradient(90deg,#a78bfa,#f472b6,#fb7185);
-  box-shadow:0 10px 20px rgba(167,139,250,0.4);
-  position:sticky;top:16px;z-index:99;
 }
-nav h1{color:white;font-size:22px;font-weight:700
+nav h1{
+  font-size:38px;font-weight:800;letter-spacing:1px;color:white;
+}
+nav ul{list-style:none;display:flex;gap:20px}
+nav ul li a{
+  text-decoration:none;color:#8892b0;font-size:15px;
+  transition:0.3s;
+}
+nav ul li a:hover{color:#00e5ff}
+
+/* HERO - Center like photo */
+.hero{
+  text-align:center;
+  padding:60px 8% 30px 8%;
+  max-width:800px;margin:0 auto;
+}
+.hero h1{
+  font-size:52px;font-weight:800;margin-bottom:25px;
+  color:white;letter-spacing:-1px;
+}
+.hero p{
+  color:#8892b0;font-size:18px;line-height:1.8;
+  max-width:600px;margin:0 auto 40px auto;
+}
+
+/* BUTTONS - EXACT like photo */
+.btn{
+  display:block;
+  width:220px;
+  margin:14px auto;
+  padding:16px 30px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:17px;
+  text-align:center;
+  transition:0.3s;
+}
+.btn:first-of-type{
+  background:#00e5ff;
+  color:#050a1f;
+  box-shadow:0 0 30px rgba(0,229,255,0.5);
+  border:2px solid #00e5ff;
+}
+.btn:first-of-type:hover{
+  box-shadow:0 0 50px rgba(0,229,255,0.8);
+  transform:scale(1.05);
+}
+.btn:last-of-type{
+  background:rgba(255,255,255,0.05);
+  color:white;
+  border:1.5px solid #00e5ff;
+  backdrop-filter:blur(10px);
+}
+.btn:last-of-type:hover{
+  background:rgba(0,229,255,0.1);
+}
+
+/* PROFILE IMAGE - Glowing circles like photo */
+.project-container, .skills, .section-title, footer{
+  /* keep your projects below */
+}
+.hero-image-wrapper{
+  position:relative;
+  width:320px;height:320px;
+  margin:80px auto 50px auto;
+  display:flex;justify-content:center;align-items:center;
+}
+/* If you don't have image div, this will style your img tag */
+.hero img, .profile-img{
+  width:200px;height:200px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid transparent;
+  background: linear-gradient(#050a1f,#050a1f) padding-box,
+              linear-gradient(90deg,#00e5ff,#3b82f6) border-box;
+  box-shadow:0 0 40px rgba(0,229,255,0.6), 0 0 80px rgba(59,130,246,0.4);
+  position:relative;z-index:3;
+}
+/* Glowing rings */
+.hero-image-wrapper::before{
+  content:'';
+  position:absolute;
+  width:260px;height:260px;
+  border:1px solid rgba(0,229,255,0.3);
+  border-radius:50%;
+  animation: spin 8s linear infinite;
+}
+.hero-image-wrapper::after{
+  content:'';
